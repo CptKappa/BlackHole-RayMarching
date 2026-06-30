@@ -227,12 +227,12 @@ export class BlackholeSim extends GLCanvas {
 			img.onload = () => res(img);
 		}));
 
-		images[0].src = "../textures/nightsky/px.png";
-		images[1].src = "../textures/nightsky/nx.png";
-		images[2].src = "../textures/nightsky/py.png";
-		images[3].src = "../textures/nightsky/ny.png";
-		images[4].src = "../textures/nightsky/pz.png";
-		images[5].src = "../textures/nightsky/nz.png";
+		images[0].src = new URL('../textures/nightsky/px.png', import.meta.url).toString();
+		images[1].src = new URL('../textures/nightsky/nx.png', import.meta.url).toString();
+		images[2].src = new URL('../textures/nightsky/py.png', import.meta.url).toString();
+		images[3].src = new URL('../textures/nightsky/ny.png', import.meta.url).toString();
+		images[4].src = new URL('../textures/nightsky/pz.png', import.meta.url).toString();
+		images[5].src = new URL('../textures/nightsky/nz.png', import.meta.url).toString();
 
 		await Promise.all(proms);
 		
